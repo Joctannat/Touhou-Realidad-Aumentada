@@ -10,9 +10,9 @@
   <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"></script>
 </head>
 <body style="margin: 0; overflow: hidden;">
-
+  
   <a-scene 
-    mindar-image="imageTargetSrc: ./targets.mind; maxTrack: 2;" 
+    mindar-image="imageTargetSrc: ./targets.mind; maxTrack: 1; filterMinCF: 0.0001; filterBeta: 0.001;" 
     color-space="sRGB" 
     renderer="colorManagement: true, physicallyCorrectLights" 
     vr-mode-ui="enabled: false" 
@@ -22,15 +22,12 @@
       <!-- Nombres de los modelos -->
       <a-asset-item id="modelo0" src="./cirno.glb"></a-asset-item>
       <a-asset-item id="modelo1" src="./flan.glb"></a-asset-item>
-      <a-asset-item id="modelo2" src="./keiki.glb"></a-asset-item>
       <a-asset-item id="modelo3" src="./ran.glb"></a-asset-item>
-      <a-asset-item id="modelo4" src="./reimu.glb"></a-asset-item>
       <a-asset-item id="modelo5" src="./remi.glb"></a-asset-item>
       <a-asset-item id="modelo6" src="./sakuya.glb"></a-asset-item>
       <a-asset-item id="modelo7" src="./suwako.glb"></a-asset-item>
       <a-asset-item id="modelo8" src="./tsukasa.glb"></a-asset-item>
       <a-asset-item id="modelo9" src="./utsuho.glb"></a-asset-item>
-      <a-asset-item id="modelo10" src="./yuyu.glb"></a-asset-item>
     </a-assets>
 
     <!-- camara -->
@@ -79,6 +76,6 @@
 
 
   </a-scene>
-
+<a-entity light="type: ambient; color: #BBB"></a-entity>
 </body>
 </html>
